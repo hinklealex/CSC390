@@ -42,7 +42,8 @@ class ViewController: UIViewController, WCSessionDelegate
         //self.theLabel.text = "\(self.theLabel.text!)\(message["blah"]!)"
         dispatch_async(dispatch_get_main_queue()) { () -> Void in
             self.theLabel.text = "\(self.theLabel.text!)\(message)"
-            PhoneCore.theRowData = message
+            print(message)
+            
         }
         
         print("recieved message")
