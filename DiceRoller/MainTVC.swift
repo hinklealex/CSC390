@@ -7,18 +7,42 @@
 //
 
 import UIKit
+import WatchConnectivity
 
-class MainTVC: UIViewController, UITableViewDataSource, UITableViewDelegate
+class MainTVC: UIViewController, WCSessionDelegate, UITableViewDataSource, UITableViewDelegate
 {
-    
+    let defaults = NSUserDefaults.standardUserDefaults()
+    var session : WCSession!
     @IBOutlet weak var tv: UITableView!
     
+    func session(session: WCSession, didRecievemessage message: [String : AnyObject])
+    {
+        PhoneCore.theRowData.append(message["ARoll"] as! String)
+        self.defaults.setObject(PhoneCore.theRowData, forKey: "theRolls")
+        dispatch_async(dispatch_get_main_queue()) { () -> Void in self.tv.reloadData()
+        }
+    }
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        PhoneCore.theTV = tv
+        if WCSession.isSupported() {
+            self.session = WCSession.defaultSession()
+            session.delegate = self
+            session.activateSession()
+        }
+        
+        var theRolls = self.defaults.objectForKey("theRolls")
+        if(theRolls == nil)
+        {
+            theRolls = [String]()
+            self.defaults.setObject(theRolls, forKey: "theRolls")
+            
+        }
+        PhoneCore.theRowData = theRolls as! [String]
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
@@ -47,7 +71,10 @@ class MainTVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
         // Configure the cell...
-        cell.textLabel?.text = PhoneCore.theRowData[indexPath.row]
+        let theParts = PhoneCore.theRowData[indexPath.row].componentsSeparatedByString("->")
+        cell.textLabel?.text = theParts[1]
+        
+        cell.textLabel?.text = theParts[0]
         return cell
     }
     

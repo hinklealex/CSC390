@@ -15,8 +15,8 @@
 		0214EDF61BE7F8E000EE0372 /* d20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0214EDF51BE7F8E000EE0372 /* d20.jpg */; };
 		0214EDF81BE7F91600EE0372 /* d12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0214EDF71BE7F91600EE0372 /* d12.jpg */; };
 		0214EDFD1BF3D94400EE0372 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EDFC1BF3D94400EE0372 /* MainTVC.swift */; };
-		0214EDFF1BF3E16100EE0372 /* DataEntryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EDFE1BF3E16100EE0372 /* DataEntryVC.swift */; };
 		0214EE011BF3E20A00EE0372 /* PhoneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE001BF3E20A00EE0372 /* PhoneCore.swift */; };
+		0214EE051BF6848400EE0372 /* rollDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE041BF6848400EE0372 /* rollDetailCell.swift */; };
 		022A1C551BB5D9360050967A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1C541BB5D9360050967A /* AppDelegate.swift */; };
 		022A1C571BB5D9360050967A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1C561BB5D9360050967A /* ViewController.swift */; };
 		022A1C5A1BB5D9360050967A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022A1C581BB5D9360050967A /* Main.storyboard */; };
@@ -92,8 +92,8 @@
 		0214EDF71BE7F91600EE0372 /* d12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d12.jpg; sourceTree = "<group>"; };
 		0214EDFB1BE7FCC600EE0372 /* DiceRoller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DiceRoller.entitlements; sourceTree = "<group>"; };
 		0214EDFC1BF3D94400EE0372 /* MainTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
-		0214EDFE1BF3E16100EE0372 /* DataEntryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntryVC.swift; sourceTree = "<group>"; };
 		0214EE001BF3E20A00EE0372 /* PhoneCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCore.swift; sourceTree = "<group>"; };
+		0214EE041BF6848400EE0372 /* rollDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rollDetailCell.swift; sourceTree = "<group>"; };
 		022A1C511BB5D9360050967A /* DiceRoller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022A1C541BB5D9360050967A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		022A1C561BB5D9360050967A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -175,8 +175,8 @@
 				022A1C5D1BB5D9360050967A /* LaunchScreen.storyboard */,
 				022A1C601BB5D9360050967A /* Info.plist */,
 				0214EDFC1BF3D94400EE0372 /* MainTVC.swift */,
-				0214EDFE1BF3E16100EE0372 /* DataEntryVC.swift */,
 				0214EE001BF3E20A00EE0372 /* PhoneCore.swift */,
+				0214EE041BF6848400EE0372 /* rollDetailCell.swift */,
 			);
 			path = DiceRoller;
 			sourceTree = "<group>";
@@ -416,8 +416,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0214EE051BF6848400EE0372 /* rollDetailCell.swift in Sources */,
 				022A1C571BB5D9360050967A /* ViewController.swift in Sources */,
-				0214EDFF1BF3E16100EE0372 /* DataEntryVC.swift in Sources */,
 				0214EE011BF3E20A00EE0372 /* PhoneCore.swift in Sources */,
 				0214EDFD1BF3D94400EE0372 /* MainTVC.swift in Sources */,
 				022A1C551BB5D9360050967A /* AppDelegate.swift in Sources */,
