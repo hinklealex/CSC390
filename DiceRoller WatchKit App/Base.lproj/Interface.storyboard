@@ -142,7 +142,7 @@
                                     <items>
                                         <button width="135" alignment="left" title="Add" id="a1m-Sj-5dL">
                                             <connections>
-                                                <segue destination="cDO-Tx-jd4" kind="push" id="1Gf-Ym-UNv"/>
+                                                <segue destination="cDO-Tx-jd4" kind="push" id="hEl-bU-DgA"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -193,8 +193,8 @@
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="theModeLabel" destination="XOO-RS-MNh" id="Gcn-di-8NL"/>
-                        <outlet property="theTable" destination="mfn-vc-FGd" id="bbV-VN-nTy"/>
+                        <outlet property="theModeLabel" destination="XOO-RS-MNh" id="gco-IA-07a"/>
+                        <outlet property="theTable" destination="mfn-vc-FGd" id="PrO-9y-tgU"/>
                     </connections>
                 </controller>
             </objects>
@@ -228,7 +228,7 @@
                         </table>
                     </items>
                     <connections>
-                        <outlet property="theTable" destination="2Fy-C5-Jdb" id="LKs-06-CHx"/>
+                        <outlet property="theTable" destination="2Fy-C5-Jdb" id="43T-ql-v8k"/>
                     </connections>
                 </controller>
             </objects>
@@ -244,19 +244,19 @@
                             <items>
                                 <picker width="1" height="86" alignment="left" id="Td9-me-aUe">
                                     <connections>
-                                        <action selector="pickerDidChange:" destination="Wzm-pm-odr" id="ODO-Iz-idu"/>
+                                        <action selector="pickerDidChange:" destination="Wzm-pm-odr" id="DoQ-Zc-g3N"/>
                                     </connections>
                                 </picker>
                             </items>
                         </group>
                         <button width="1" alignment="left" title="Select Name" id="4Zr-QT-Tgx">
                             <connections>
-                                <action selector="selectNameButtonPressed" destination="Wzm-pm-odr" id="xcc-Qr-SQs"/>
+                                <action selector="selectNameButtonPressed" destination="Wzm-pm-odr" id="ZK7-dO-BBF"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="thePicker" destination="Td9-me-aUe" id="5WE-6z-jFr"/>
+                        <outlet property="thePicker" destination="Td9-me-aUe" id="qcD-e2-tDv"/>
                     </connections>
                 </controller>
             </objects>

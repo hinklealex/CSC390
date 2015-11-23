@@ -1,48 +1,20 @@
 //
-//  MainTVC.swift
+//  RollsTVC.swift
 //  DiceRoller
 //
-//  Created by Alex Hinkle on 11/11/15.
+//  Created by Alex Hinkle on 11/16/15.
 //  Copyright © 2015 Alex Hinkle. All rights reserved.
 //
 
 import UIKit
-import WatchConnectivity
-import Parse
 
-class MainTVC: UIViewController, WCSessionDelegate, UITableViewDataSource, UITableViewDelegate
+class RollsTVC: UITableViewController
 {
-    let defaults = NSUserDefaults.standardUserDefaults()
-    var session : WCSession!
-    @IBOutlet weak var tv: UITableView!
-    
-    func session(session: WCSession, didReceiveMessage message: [String : AnyObject])
-    {
-        PhoneCore.theRowData.append(message["aRoll"] as! String)
-        self.defaults.setObject(PhoneCore.theRowData, forKey: "theRolls")
-        dispatch_async(dispatch_get_main_queue()) { () -> Void in
-            self.tv.reloadData()
-        }
-        
-    }
+    var theRolls : [String]!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        var theRolls = self.defaults.objectForKey("theRolls")
-        if(theRolls == nil)
-        {
-            theRolls = [String]()
-            self.defaults.setObject(theRolls, forKey: "theRolls")
-        }
-        PhoneCore.theRowData = theRolls as! [String]
-        
-        if WCSession.isSupported() {
-            self.session = WCSession.defaultSession()
-            session.delegate = self
-            session.activateSession()
-        }
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -51,40 +23,29 @@ class MainTVC: UIViewController, WCSessionDelegate, UITableViewDataSource, UITab
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     // MARK: - Table view data source
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int
-    {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return PhoneCore.theRowData.count
+        return self.theRolls.count
     }
     
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
-    {
-        print("getting cell")
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! rollDetailCell
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
         // Configure the cell...
-        let theParts = PhoneCore.theRowData[indexPath.row].componentsSeparatedByString("->")
-        cell.rollTotalLabel.text = theParts[1]
-        let rtvc = storyboard?.instantiateViewControllerWithIdentifier("RollsTVC") as! RollsTVC
-        cell.rtvc = rtvc
-        cell.rollDetailsTV.dataSource = rtvc
-        cell.rollDetailsTV.delegate = rtvc
-        print(theParts[0])
-        var rollString = theParts[0].substringFromIndex(theParts[0].startIndex.advancedBy(1))
-        rollString = rollString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-        rollString = rollString.substringToIndex(rollString.endIndex.predecessor())
-        rtvc.theRolls = rollString.componentsSeparatedByString(" ")
-        
-        //cell.detailTextLabel?.text = theParts[0]
+        cell.textLabel!.text = self.theRolls[indexPath.row]
         return cell
     }
     
