@@ -20,6 +20,7 @@ class RegisterVC: UIViewController
     
     @IBOutlet weak var emailTF: UITextField!
     
+    @IBOutlet weak var theSpinner: UIActivityIndicatorView!
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -56,14 +57,7 @@ class RegisterVC: UIViewController
         if(message.characters.count != 0)
         {
             //there was a problem
-            let av = UIAlertController(title: "Error", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-            self.presentViewController(av, animated: true, completion: { () -> Void in
-                let delay = 2 * Double(NSEC_PER_SEC)
-                let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-                dispatch_after(time, dispatch_get_main_queue(), { () -> Void in
-                    self.dismissViewControllerAnimated(true, completion: nil)
-                })
-            })
+           PhoneCore.showAlert("Error", message: message, presentingViewController: self, onScreenDelay: 2)
         }
         else
         {
@@ -75,17 +69,24 @@ class RegisterVC: UIViewController
                 user.password = passwordTF.text!
                 user.email = emailTF.text!
                 // other fields can be set just like with PFObject
-                
-                user.signUpInBackgroundWithBlock {
-                    (succeeded: Bool, error: NSError?) -> Void in
-                    if let error = error {
-                         _ = error.userInfo["error"] as? NSString
-                        // Show the errorString somewhere and let the user try again.
-                    } else {
-                        // Hooray! Let them use the app now.
-                    
-                }
-            }
+            
+            self.theSpinner.startAnimating()
+            
+                user.signUpInBackgroundWithBlock({
+                    (success: Bool, error: NSError?) -> Void in
+                    if(success)
+                    {
+                        print("over here")
+                        self.theSpinner.stopAnimating()
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    }
+                        else
+                    {
+                        print(error?.userInfo["error"])
+                    }
+            })
+            
+            
         }
     }
     

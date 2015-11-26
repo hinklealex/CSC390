@@ -20,6 +20,7 @@
 		0214EE071BFA73F200EE0372 /* RollsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE061BFA73F200EE0372 /* RollsTVC.swift */; };
 		0214EE0D1BFFBB5600EE0372 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE0C1BFFBB5600EE0372 /* LoginVC.swift */; };
 		0214EE0F1BFFBD4400EE0372 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE0E1BFFBD4400EE0372 /* RegisterVC.swift */; };
+		0214EE111C03B3F900EE0372 /* UserHomepageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE101C03B3F900EE0372 /* UserHomepageVC.swift */; };
 		022A1C551BB5D9360050967A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1C541BB5D9360050967A /* AppDelegate.swift */; };
 		022A1C571BB5D9360050967A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1C561BB5D9360050967A /* ViewController.swift */; };
 		022A1C5A1BB5D9360050967A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022A1C581BB5D9360050967A /* Main.storyboard */; };
@@ -101,6 +102,7 @@
 		0214EE061BFA73F200EE0372 /* RollsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollsTVC.swift; sourceTree = "<group>"; };
 		0214EE0C1BFFBB5600EE0372 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		0214EE0E1BFFBD4400EE0372 /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		0214EE101C03B3F900EE0372 /* UserHomepageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHomepageVC.swift; sourceTree = "<group>"; };
 		022A1C511BB5D9360050967A /* DiceRoller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiceRoller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		022A1C541BB5D9360050967A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		022A1C561BB5D9360050967A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				0214EE061BFA73F200EE0372 /* RollsTVC.swift */,
 				0214EE0C1BFFBB5600EE0372 /* LoginVC.swift */,
 				0214EE0E1BFFBD4400EE0372 /* RegisterVC.swift */,
+				0214EE101C03B3F900EE0372 /* UserHomepageVC.swift */,
 			);
 			path = DiceRoller;
 			sourceTree = "<group>";
@@ -507,6 +510,7 @@
 				0214EE071BFA73F200EE0372 /* RollsTVC.swift in Sources */,
 				0214EE011BF3E20A00EE0372 /* PhoneCore.swift in Sources */,
 				0214EDFD1BF3D94400EE0372 /* MainTVC.swift in Sources */,
+				0214EE111C03B3F900EE0372 /* UserHomepageVC.swift in Sources */,
 				022A1C551BB5D9360050967A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

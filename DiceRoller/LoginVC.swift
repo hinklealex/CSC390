@@ -11,6 +11,7 @@ import Parse
 
 class LoginVC: UIViewController
 {
+    static var useridlabeltext = ""
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -18,7 +19,7 @@ class LoginVC: UIViewController
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-            }
+    }
     
     override func viewWillAppear(animated: Bool)
     {
@@ -27,23 +28,46 @@ class LoginVC: UIViewController
     
     @IBAction func loginButtonPressed(sender: AnyObject)
     {
-        PFUser.logInWithUsernameInBackground(usernameTF.text!, password:passwordTF.text!) {
-            (user: PFUser?, error: NSError?) -> Void in
-            if user != nil {
-                print("yay you rock")
-                // Do stuff after successful login.
-            } else {
-                print("Boo you suck")
-                // The login failed. Check error to see why.
+        var message = ""
+        
+        if(self.usernameTF.text!.characters.count == 0)
+        {
+            message = "You must enter a username"
+        }
+        else if(self.passwordTF.text!.characters.count == 0)
+        {
+            message = "You must enter a password"
+        }
+        
+        if(message.characters.count != 0)
+        {
+            //there was a problem
+            PhoneCore.showAlert("Login Error", message: message, presentingViewController: self, onScreenDelay: 2)
+        }
+        else
+        {
+            PFUser.logInWithUsernameInBackground(self.usernameTF.text!, password:self.passwordTF.text!) {
+                (user: PFUser?, error: NSError?) -> Void in
+                if user != nil
+                {
+                    // Do stuff after successful login.
+                    var userID = 
+                    LoginVC.useridlabeltext = "The user id is: \(user!.objectId)"
+                    let uhvc = self.storyboard?.instantiateViewControllerWithIdentifier("UserHomepageVC") as! UserHomepageVC
+                    self.presentViewController(uhvc, animated: true, completion: nil)
+                }
+                else
+                {
+                    // The login failed. Check error to see why.
+                    PhoneCore.showAlert("Login Error", message: "\(error!.userInfo["error"]!)", presentingViewController: self, onScreenDelay: 2)
+                }
             }
         }
-
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     
     /*
