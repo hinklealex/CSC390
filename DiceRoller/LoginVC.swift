@@ -51,7 +51,7 @@ class LoginVC: UIViewController
                 if user != nil
                 {
                     // Do stuff after successful login.
-                    var userID = 
+                    
                     LoginVC.useridlabeltext = "The user id is: \(user!.objectId)"
                     let uhvc = self.storyboard?.instantiateViewControllerWithIdentifier("UserHomepageVC") as! UserHomepageVC
                     self.presentViewController(uhvc, animated: true, completion: nil)
