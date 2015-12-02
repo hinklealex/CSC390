@@ -14,7 +14,6 @@
 		0214EDF41BE7F8C700EE0372 /* d4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0214EDF01BE7F8C700EE0372 /* d4.jpg */; };
 		0214EDF61BE7F8E000EE0372 /* d20.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0214EDF51BE7F8E000EE0372 /* d20.jpg */; };
 		0214EDF81BE7F91600EE0372 /* d12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0214EDF71BE7F91600EE0372 /* d12.jpg */; };
-		0214EDFD1BF3D94400EE0372 /* MainTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EDFC1BF3D94400EE0372 /* MainTVC.swift */; };
 		0214EE011BF3E20A00EE0372 /* PhoneCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE001BF3E20A00EE0372 /* PhoneCore.swift */; };
 		0214EE051BF6848400EE0372 /* rollDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE041BF6848400EE0372 /* rollDetailCell.swift */; };
 		0214EE071BFA73F200EE0372 /* RollsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0214EE061BFA73F200EE0372 /* RollsTVC.swift */; };
@@ -36,6 +35,8 @@
 		022A1CDC1BB9CEFD0050967A /* tableExampleIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1CDB1BB9CEFD0050967A /* tableExampleIC.swift */; };
 		022A1CE41BBB67350050967A /* diceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1CE31BBB67350050967A /* diceRow.swift */; };
 		022A1CEE1BBC6EEB0050967A /* pickerExampleIC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022A1CED1BBC6EEB0050967A /* pickerExampleIC.swift */; };
+		02418A921C0CE6DC003D2D2F /* customRollCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02418A911C0CE6DC003D2D2F /* customRollCellTableViewCell.swift */; };
+		02418A941C0CE742003D2D2F /* customRollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02418A931C0CE742003D2D2F /* customRollCell.swift */; };
 		024835F81BC84CA400B94E67 /* Roll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024835F71BC84CA400B94E67 /* Roll.swift */; };
 		024835FA1BC84FA400B94E67 /* rollRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024835F91BC84FA400B94E67 /* rollRow.swift */; };
 		02DEA4E81BC5AA2B003C47CE /* DiceRollerMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DEA4E71BC5AA2B003C47CE /* DiceRollerMain.swift */; };
@@ -96,7 +97,6 @@
 		0214EDF51BE7F8E000EE0372 /* d20.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d20.jpg; sourceTree = "<group>"; };
 		0214EDF71BE7F91600EE0372 /* d12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = d12.jpg; sourceTree = "<group>"; };
 		0214EDFB1BE7FCC600EE0372 /* DiceRoller.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = DiceRoller.entitlements; sourceTree = "<group>"; };
-		0214EDFC1BF3D94400EE0372 /* MainTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTVC.swift; sourceTree = "<group>"; };
 		0214EE001BF3E20A00EE0372 /* PhoneCore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneCore.swift; sourceTree = "<group>"; };
 		0214EE041BF6848400EE0372 /* rollDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rollDetailCell.swift; sourceTree = "<group>"; };
 		0214EE061BFA73F200EE0372 /* RollsTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RollsTVC.swift; sourceTree = "<group>"; };
@@ -123,6 +123,8 @@
 		022A1CDB1BB9CEFD0050967A /* tableExampleIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = tableExampleIC.swift; sourceTree = "<group>"; };
 		022A1CE31BBB67350050967A /* diceRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = diceRow.swift; sourceTree = "<group>"; };
 		022A1CED1BBC6EEB0050967A /* pickerExampleIC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pickerExampleIC.swift; sourceTree = "<group>"; };
+		02418A911C0CE6DC003D2D2F /* customRollCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customRollCellTableViewCell.swift; sourceTree = "<group>"; };
+		02418A931C0CE742003D2D2F /* customRollCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customRollCell.swift; sourceTree = "<group>"; };
 		024835F71BC84CA400B94E67 /* Roll.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Roll.swift; sourceTree = "<group>"; };
 		024835F91BC84FA400B94E67 /* rollRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rollRow.swift; sourceTree = "<group>"; };
 		02DEA4E71BC5AA2B003C47CE /* DiceRollerMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiceRollerMain.swift; sourceTree = "<group>"; };
@@ -189,13 +191,14 @@
 				022A1C5B1BB5D9360050967A /* Assets.xcassets */,
 				022A1C5D1BB5D9360050967A /* LaunchScreen.storyboard */,
 				022A1C601BB5D9360050967A /* Info.plist */,
-				0214EDFC1BF3D94400EE0372 /* MainTVC.swift */,
 				0214EE001BF3E20A00EE0372 /* PhoneCore.swift */,
 				0214EE041BF6848400EE0372 /* rollDetailCell.swift */,
 				0214EE061BFA73F200EE0372 /* RollsTVC.swift */,
 				0214EE0C1BFFBB5600EE0372 /* LoginVC.swift */,
 				0214EE0E1BFFBD4400EE0372 /* RegisterVC.swift */,
 				0214EE101C03B3F900EE0372 /* UserHomepageVC.swift */,
+				02418A911C0CE6DC003D2D2F /* customRollCellTableViewCell.swift */,
+				02418A931C0CE742003D2D2F /* customRollCell.swift */,
 			);
 			path = DiceRoller;
 			sourceTree = "<group>";
@@ -504,12 +507,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0214EE051BF6848400EE0372 /* rollDetailCell.swift in Sources */,
+				02418A941C0CE742003D2D2F /* customRollCell.swift in Sources */,
 				0214EE0F1BFFBD4400EE0372 /* RegisterVC.swift in Sources */,
 				022A1C571BB5D9360050967A /* ViewController.swift in Sources */,
+				02418A921C0CE6DC003D2D2F /* customRollCellTableViewCell.swift in Sources */,
 				0214EE0D1BFFBB5600EE0372 /* LoginVC.swift in Sources */,
 				0214EE071BFA73F200EE0372 /* RollsTVC.swift in Sources */,
 				0214EE011BF3E20A00EE0372 /* PhoneCore.swift in Sources */,
-				0214EDFD1BF3D94400EE0372 /* MainTVC.swift in Sources */,
 				0214EE111C03B3F900EE0372 /* UserHomepageVC.swift in Sources */,
 				022A1C551BB5D9360050967A /* AppDelegate.swift in Sources */,
 			);

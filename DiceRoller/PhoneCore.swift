@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import Parse
 
 class PhoneCore: NSObject
 {
-    
-    static var theRowData : [String]!
+    static var currentUser: PFUser!
+    static var theRowData  = [PFObject]()
+   
     
     static func showAlert(title: String, message: String, presentingViewController: UIViewController, onScreenDelay: Double)
     {

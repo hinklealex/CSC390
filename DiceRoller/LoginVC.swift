@@ -11,7 +11,6 @@ import Parse
 
 class LoginVC: UIViewController
 {
-    static var useridlabeltext = ""
     
     @IBOutlet weak var usernameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
@@ -46,13 +45,14 @@ class LoginVC: UIViewController
         }
         else
         {
+            print("Trying to login")
             PFUser.logInWithUsernameInBackground(self.usernameTF.text!, password:self.passwordTF.text!) {
                 (user: PFUser?, error: NSError?) -> Void in
                 if user != nil
                 {
                     // Do stuff after successful login.
-                    
-                    LoginVC.useridlabeltext = "The user id is: \(user!.objectId)"
+                    PhoneCore.currentUser = user
+                    print("success")
                     let uhvc = self.storyboard?.instantiateViewControllerWithIdentifier("UserHomepageVC") as! UserHomepageVC
                     self.presentViewController(uhvc, animated: true, completion: nil)
                 }

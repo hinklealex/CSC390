@@ -1,60 +1,60 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="il8-fx-HkH">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3Rn-c2-cXF">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9019"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--rootIC-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DiceRoller_WatchKit_App" customModuleProvider="target">
+                <controller identifier="rootIC" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="DiceRoller_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="0LY-Re-KaL">
+                        <group width="1" alignment="left" layout="vertical" id="vzN-Dn-Msf">
                             <items>
-                                <group width="1" alignment="left" id="R4m-Eg-jFD">
+                                <group width="1" alignment="left" id="gIW-S3-GHC">
                                     <items>
-                                        <button width="0.29999999999999999" alignment="left" title="D4" id="41t-SF-Ome">
+                                        <button width="0.33000000000000002" alignment="left" title="D4" id="46m-nC-O6R">
                                             <connections>
-                                                <action selector="Dd4ButtonCLicked" destination="AgC-eL-Hgc" id="Zwv-ml-klE"/>
+                                                <action selector="d4ButtonClicked" destination="AgC-eL-Hgc" id="mmK-F4-NsF"/>
                                             </connections>
                                         </button>
-                                        <button width="42" alignment="left" title="D6" id="WTd-Ei-75m">
+                                        <button width="0.33000000000000002" alignment="left" title="D6" id="RG9-2Z-yu1">
                                             <connections>
-                                                <action selector="D6ButtonPressed" destination="AgC-eL-Hgc" id="HX5-5n-q8s"/>
+                                                <action selector="d6ButtonClicked" destination="AgC-eL-Hgc" id="qbB-RO-iGh"/>
                                             </connections>
                                         </button>
-                                        <button width="50" alignment="left" title="D8" id="wNl-pV-ubN">
+                                        <button width="0.33000000000000002" alignment="left" title="D8" id="UyB-Zv-Zr5">
                                             <connections>
-                                                <action selector="d8ButtonPressed" destination="AgC-eL-Hgc" id="4wX-M7-c7u"/>
+                                                <action selector="d8ButtonClicked" destination="AgC-eL-Hgc" id="3Ex-5a-J6b"/>
                                             </connections>
                                         </button>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" id="vxZ-vn-kbh">
+                                <group width="1" alignment="left" id="VwY-QT-Sdg">
                                     <items>
-                                        <button width="0.29999999999999999" alignment="left" title="D10" id="851-UM-lPB">
+                                        <button width="0.33000000000000002" alignment="left" title="D10" id="j4D-uj-Qmg">
                                             <connections>
-                                                <action selector="d10ButtonPressed" destination="AgC-eL-Hgc" id="UMc-YR-khh"/>
+                                                <action selector="d10ButtonClicked" destination="AgC-eL-Hgc" id="i5R-Dk-mYR"/>
                                             </connections>
                                         </button>
-                                        <button width="43" alignment="left" title="D12" id="ftb-W9-pOI">
+                                        <button width="0.33000000000000002" alignment="left" title="D12" id="vlC-YA-cNn">
                                             <connections>
-                                                <action selector="d12ButtonPressed" destination="AgC-eL-Hgc" id="yeI-Ro-Sn9"/>
+                                                <action selector="d12ButtonClicked" destination="AgC-eL-Hgc" id="aVj-1w-e8c"/>
                                             </connections>
                                         </button>
-                                        <button width="44" alignment="left" title="D20" id="NLY-xf-A6t">
+                                        <button width="0.33000000000000002" alignment="left" title="D20" id="pMn-H3-nx6">
                                             <connections>
-                                                <action selector="d20ButtonPressed" destination="AgC-eL-Hgc" id="7mh-P3-eJb"/>
+                                                <action selector="d20ButtonClicked" destination="AgC-eL-Hgc" id="YgX-Ie-NGA"/>
                                             </connections>
                                         </button>
                                     </items>
                                 </group>
-                                <group width="1" alignment="left" id="doH-Ri-uXE">
+                                <group width="1" alignment="left" id="3Gl-cT-PoW">
                                     <items>
-                                        <button width="1" alignment="left" title="D100" id="Lui-sw-9ba">
+                                        <button width="1" alignment="left" title="D100" id="5Rm-6Y-VfK">
                                             <connections>
-                                                <action selector="d00ButtonPRessed" destination="AgC-eL-Hgc" id="7X8-e8-VXV"/>
+                                                <action selector="d100ButtonClicked" destination="AgC-eL-Hgc" id="4A0-bT-gym"/>
                                             </connections>
                                         </button>
                                     </items>
@@ -62,205 +62,137 @@
                             </items>
                         </group>
                     </items>
-                    <connections>
-                        <segue destination="Yag-lk-dbM" kind="relationship" relationship="nextPage" id="BxJ-CT-nF3"/>
-                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="46" y="212"/>
+            <point key="canvasLocation" x="165" y="346"/>
         </scene>
-        <!--Table ExampleIC-->
-        <scene sceneID="7hM-WK-cmX">
+        <!--tableScreen-->
+        <scene sceneID="ze8-jk-LL5">
             <objects>
-                <controller hidesWhenLoading="NO" id="Yag-lk-dbM" customClass="tableExampleIC" customModule="DiceRoller_WatchKit_Extension">
+                <controller identifier="tableScreen" hidesWhenLoading="NO" id="9mA-3d-Y5u" customClass="tableExampleIC" customModule="DiceRoller_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="sZy-SS-lnC">
+                        <group width="1" alignment="left" layout="vertical" id="dVp-EU-ORG">
                             <items>
-                                <table alignment="left" id="qb4-T7-Kiv">
+                                <table alignment="left" id="bgS-3k-m1D">
                                     <items>
-                                        <tableRow identifier="cell" id="f8H-LU-DN4" customClass="diceRow" customModule="DiceRoller_WatchKit_Extension">
-                                            <group key="rootItem" width="1" alignment="left" id="3l4-Qs-CTH">
+                                        <tableRow identifier="cell" id="Ybs-Go-rI3" customClass="diceRow" customModule="DiceRoller_WatchKit_Extension">
+                                            <group key="rootItem" width="1" alignment="left" id="Pqg-gb-5Qx">
                                                 <items>
-                                                    <label width="0.67000000000000004" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="w7C-WV-yjz"/>
-                                                    <imageView width="0.33000000000000002" height="1" alignment="left" image="d20.jpg" id="sV6-ec-Cbm"/>
+                                                    <imageView alignment="left" image="d20.jpeg" id="Jcz-Sg-nvJ"/>
+                                                    <label width="0.67000000000000004" height="42.5" alignment="left" text="Label" textAlignment="center" id="VvX-k2-tH1"/>
                                                 </items>
                                             </group>
                                             <connections>
-                                                <outlet property="theImage" destination="sV6-ec-Cbm" id="B0t-9W-MHi"/>
-                                                <outlet property="theLabel" destination="w7C-WV-yjz" id="t8E-bj-3PP"/>
+                                                <outlet property="theImage" destination="Jcz-Sg-nvJ" id="EWi-c4-faP"/>
+                                                <outlet property="theLabel" destination="VvX-k2-tH1" id="bc0-Zz-YUZ"/>
                                             </connections>
                                         </tableRow>
                                     </items>
                                 </table>
                             </items>
                         </group>
-                        <separator alignment="left" id="eqw-H5-Hyx"/>
+                        <separator width="134" alignment="left" id="UDi-xU-Gg9"/>
                     </items>
                     <connections>
-                        <outlet property="theTable" destination="qb4-T7-Kiv" id="hvK-kF-OfH"/>
-                        <segue destination="zy9-LG-RtR" kind="relationship" relationship="nextPage" id="bGt-4W-89f"/>
+                        <outlet property="theTable" destination="bgS-3k-m1D" id="5mQ-XH-yjk"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="219" y="212"/>
+            <point key="canvasLocation" x="334" y="346"/>
         </scene>
-        <!--Picker ExampleIC-->
-        <scene sceneID="9cM-7R-U7U">
+        <!--pickerScreen-->
+        <scene sceneID="CZE-Io-NvU">
             <objects>
-                <controller hidesWhenLoading="NO" id="zy9-LG-RtR" customClass="pickerExampleIC" customModule="DiceRoller_WatchKit_Extension">
+                <controller identifier="pickerScreen" hidesWhenLoading="NO" id="Dr1-6L-PnE" customClass="pickerExampleIC" customModule="DiceRoller_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="ugd-2Z-lO9">
+                        <group width="1" alignment="left" layout="vertical" id="bwe-Hw-QrW">
                             <items>
-                                <picker width="134" alignment="left" style="stack" focusStyle="sequence" indicatorMode="shownWhileFocused" id="46u-Bx-n3G">
+                                <picker alignment="left" style="stack" focusStyle="sequence" id="Lmr-36-jOJ">
                                     <connections>
-                                        <action selector="pickerWasClicked:" destination="zy9-LG-RtR" id="PE0-AH-hai"/>
+                                        <action selector="pickerWasClicked:" destination="Dr1-6L-PnE" id="M9r-BK-kpa"/>
                                     </connections>
                                 </picker>
                             </items>
                         </group>
-                        <button width="1" alignment="left" title="which one" id="stF-ct-ZC8">
+                        <button width="1" alignment="left" title="which one?" id="tMf-3b-HJv">
                             <connections>
-                                <action selector="whichOneButtonPressed" destination="zy9-LG-RtR" id="wFA-ia-1Tt"/>
+                                <action selector="whichOneButtonPressed" destination="Dr1-6L-PnE" id="Lu9-pq-vUm"/>
                             </connections>
                         </button>
                     </items>
                     <connections>
-                        <outlet property="thePicker" destination="46u-Bx-n3G" id="PnW-jt-ifN"/>
+                        <outlet property="thePicker" destination="Lmr-36-jOJ" id="M3g-tK-P7M"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="402" y="212"/>
+            <point key="canvasLocation" x="502" y="346"/>
         </scene>
-        <!--MainSelectScreen-->
-        <scene sceneID="dVe-5U-kDm">
+        <!--Main ScreenIC-->
+        <scene sceneID="y4S-Q4-rTp">
             <objects>
-                <controller identifier="MainSelectScreen" hidesWhenLoading="NO" id="il8-fx-HkH" customClass="MainScreenIC" customModule="DiceRoller_WatchKit_Extension">
+                <controller hidesWhenLoading="NO" id="3Rn-c2-cXF" customClass="MainScreenIC" customModule="DiceRoller_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="HHw-X0-sLd">
+                        <group width="1" alignment="left" layout="vertical" id="l2m-CN-0I3">
                             <items>
-                                <group width="1" alignment="left" id="7XW-rv-dM8">
+                                <button width="1" alignment="left" title="Add Roll" id="z7k-gg-vq5">
+                                    <connections>
+                                        <segue destination="M0W-pr-36P" kind="push" id="kF2-E0-CEq"/>
+                                    </connections>
+                                </button>
+                                <label width="1" alignment="left" text="Mode: Roll" textAlignment="center" id="66F-sk-NBN">
+                                    <color key="textColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </label>
+                                <table alignment="left" id="FQm-dZ-qQA">
                                     <items>
-                                        <button width="135" alignment="left" title="Add" id="a1m-Sj-5dL">
-                                            <connections>
-                                                <segue destination="cDO-Tx-jd4" kind="push" id="hEl-bU-DgA"/>
-                                            </connections>
-                                        </button>
-                                    </items>
-                                </group>
-                            </items>
-                        </group>
-                        <label width="1" alignment="center" text="Mode: Roll" textAlignment="center" id="XOO-RS-MNh"/>
-                        <table alignment="left" id="mfn-vc-FGd">
-                            <items>
-                                <tableRow identifier="cell" id="iGa-Ya-eHt" customClass="rollRow" customModule="DiceRoller_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" layout="vertical" id="GsF-3n-aLW">
-                                        <items>
-                                            <group width="1" alignment="left" id="wEJ-ZA-XOC">
+                                        <tableRow identifier="cell" id="wYH-Lk-Ozr" customClass="rollRow" customModule="DiceRoller_WatchKit_Extension">
+                                            <group key="rootItem" width="1" alignment="left" layout="vertical" id="PKA-vf-tdU">
                                                 <items>
-                                                    <label width="0.5" height="1" alignment="left" text="4" id="TjD-W2-RcL"/>
-                                                    <label width="0.5" height="1" alignment="left" text="D6" id="ZpO-Dq-jDZ"/>
+                                                    <group width="1" alignment="left" id="Ju2-wr-9Gc">
+                                                        <items>
+                                                            <label width="0.5" height="1" alignment="left" text="4" id="dSu-ju-exl"/>
+                                                            <label width="0.5" height="1" alignment="left" text="D6" id="qAi-14-UWX"/>
+                                                        </items>
+                                                    </group>
+                                                    <label width="1" alignment="left" text="Name" textAlignment="center" id="Sac-ky-xZL"/>
                                                 </items>
                                             </group>
-                                            <label width="1" alignment="left" text="Name" textAlignment="center" id="6Bl-yQ-1s7"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="nameLabel" destination="6Bl-yQ-1s7" id="prF-R1-Ku5"/>
-                                        <outlet property="qtyLabel" destination="TjD-W2-RcL" id="SYP-7G-34t"/>
-                                        <outlet property="sidesLabel" destination="ZpO-Dq-jDZ" id="xle-1X-kLg"/>
-                                    </connections>
-                                </tableRow>
+                                            <connections>
+                                                <outlet property="nameLabel" destination="Sac-ky-xZL" id="VrZ-S0-fME"/>
+                                                <outlet property="qtyLabel" destination="dSu-ju-exl" id="pRT-ub-SGa"/>
+                                                <outlet property="sidesLabel" destination="qAi-14-UWX" id="0Vc-gI-YsQ"/>
+                                            </connections>
+                                        </tableRow>
+                                    </items>
+                                </table>
                             </items>
-                        </table>
+                        </group>
                     </items>
-                    <menu key="menu" id="ycR-Nc-4Qe">
+                    <menu key="menu" id="lTJ-gn-nqq">
                         <items>
-                            <menuItem title="Roll" icon="play" id="eu1-AX-mAU">
+                            <menuItem title="Roll" icon="play" id="BHb-Zh-9WR">
                                 <connections>
-                                    <action selector="rollContextButtonPressed" destination="il8-fx-HkH" id="1cR-B5-sc1"/>
+                                    <action selector="rollContextButtonPressed" destination="3Rn-c2-cXF" id="A9y-kF-cuZ"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Edit" icon="more" id="as6-Sb-ciE">
+                            <menuItem title="Edit" icon="more" id="PJ1-2I-YVs">
                                 <connections>
-                                    <action selector="editContextButtonPressed" destination="il8-fx-HkH" id="5wO-it-emw"/>
+                                    <action selector="editContextButtonPressed" destination="3Rn-c2-cXF" id="Y8U-Yg-9D4"/>
                                 </connections>
                             </menuItem>
-                            <menuItem title="Delete" icon="trash" id="pkb-aL-5da">
+                            <menuItem title="Delete" icon="trash" id="KJP-Yg-vRV">
                                 <connections>
-                                    <action selector="deleteContextButtonPressed" destination="il8-fx-HkH" id="nz4-G1-GXI"/>
+                                    <action selector="deleteContextButtonPressed" destination="3Rn-c2-cXF" id="6ZX-hf-h1n"/>
                                 </connections>
                             </menuItem>
                         </items>
                     </menu>
                     <connections>
-                        <outlet property="theModeLabel" destination="XOO-RS-MNh" id="gco-IA-07a"/>
-                        <outlet property="theTable" destination="mfn-vc-FGd" id="PrO-9y-tgU"/>
+                        <outlet property="theModeLabel" destination="66F-sk-NBN" id="XD2-hs-8h9"/>
+                        <outlet property="theTable" destination="FQm-dZ-qQA" id="zP6-g1-oIq"/>
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="-37" y="579"/>
-        </scene>
-        <!--DiceSelectScreenIC-->
-        <scene sceneID="lXE-kt-KnI">
-            <objects>
-                <controller identifier="DiceSelectScreenIC" hidesWhenLoading="NO" id="cDO-Tx-jd4" customClass="DiceSelectIC" customModule="DiceRoller_WatchKit_Extension">
-                    <items>
-                        <group width="1" alignment="left" id="fS5-eU-46k">
-                            <items>
-                                <label alignment="center" verticalAlignment="center" text="Pick a Dice" id="wj8-eM-gFv"/>
-                            </items>
-                        </group>
-                        <table alignment="left" id="2Fy-C5-Jdb">
-                            <items>
-                                <tableRow identifier="cell" id="6HQ-MT-tC7" customClass="diceRow" customModule="DiceRoller_WatchKit_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="60J-wn-WhC">
-                                        <items>
-                                            <imageView width="0.33000000000000002" height="1" alignment="left" id="Zgz-SG-ibD"/>
-                                            <label width="0.67000000000000004" alignment="center" verticalAlignment="center" text="Label" textAlignment="center" id="NE4-zZ-6nq"/>
-                                        </items>
-                                    </group>
-                                    <connections>
-                                        <outlet property="theImage" destination="Zgz-SG-ibD" id="hle-AZ-93k"/>
-                                        <outlet property="theLabel" destination="NE4-zZ-6nq" id="jfm-PE-9Wj"/>
-                                    </connections>
-                                </tableRow>
-                            </items>
-                        </table>
-                    </items>
-                    <connections>
-                        <outlet property="theTable" destination="2Fy-C5-Jdb" id="43T-ql-v8k"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="112" y="579"/>
-        </scene>
-        <!--QuantitySelectScreenIC-->
-        <scene sceneID="VPH-MZ-FPC">
-            <objects>
-                <controller identifier="QuantitySelectScreenIC" hidesWhenLoading="NO" id="Wzm-pm-odr" customClass="QuanitySelectScreenIC" customModule="DiceRoller_WatchKit_Extension">
-                    <items>
-                        <label alignment="center" text="Select a QTY" id="QOe-YB-Mpu"/>
-                        <group width="1" height="74" alignment="left" layout="vertical" id="dKd-jS-Pjw">
-                            <items>
-                                <picker width="1" height="86" alignment="left" id="Td9-me-aUe">
-                                    <connections>
-                                        <action selector="pickerDidChange:" destination="Wzm-pm-odr" id="DoQ-Zc-g3N"/>
-                                    </connections>
-                                </picker>
-                            </items>
-                        </group>
-                        <button width="1" alignment="left" title="Select Name" id="4Zr-QT-Tgx">
-                            <connections>
-                                <action selector="selectNameButtonPressed" destination="Wzm-pm-odr" id="ZK7-dO-BBF"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="thePicker" destination="Td9-me-aUe" id="qcD-e2-tDv"/>
-                    </connections>
-                </controller>
-            </objects>
-            <point key="canvasLocation" x="272" y="579"/>
+            <point key="canvasLocation" x="166" y="560"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">
@@ -276,14 +208,76 @@
                     </connections>
                 </notificationController>
             </objects>
-            <point key="canvasLocation" x="112" y="952"/>
+            <point key="canvasLocation" x="190" y="777"/>
         </scene>
         <!--Notification Controller-->
         <scene sceneID="ZPc-GJ-vnh">
             <objects>
                 <controller id="4sK-HA-Art" customClass="NotificationController" customModule="DiceRoller_WatchKit_App" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="312" y="952"/>
+            <point key="canvasLocation" x="438" y="777"/>
+        </scene>
+        <!--Dice Select ScreenIC-->
+        <scene sceneID="ePa-WX-pCH">
+            <objects>
+                <controller hidesWhenLoading="NO" id="M0W-pr-36P" customClass="DiceSelectScreenIC" customModule="DiceRoller_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="oaO-Of-AjB">
+                            <items>
+                                <label width="1" alignment="left" text="Pick a Dice" textAlignment="center" id="HEn-hg-LaZ"/>
+                            </items>
+                        </group>
+                        <table alignment="left" id="Uoc-rl-vwA">
+                            <items>
+                                <tableRow identifier="cell" id="A6T-Q7-1RS" customClass="diceRow" customModule="DiceRoller_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="tqn-jH-nBu">
+                                        <items>
+                                            <imageView width="50" height="50" alignment="left" id="ED7-lh-o5K"/>
+                                            <label width="76" height="47" alignment="left" text="Label" id="1wU-Aa-8mX"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="theImage" destination="ED7-lh-o5K" id="TaM-YR-Cn1"/>
+                                        <outlet property="theLabel" destination="1wU-Aa-8mX" id="6km-aW-2PY"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="theTable" destination="Uoc-rl-vwA" id="j45-4u-Yy8"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="334" y="560"/>
+        </scene>
+        <!--QuantitySelectScreenIC-->
+        <scene sceneID="750-Cl-oQ9">
+            <objects>
+                <controller identifier="QuantitySelectScreenIC" hidesWhenLoading="NO" id="NiO-sb-nU5" customClass="QuantitySelectScreenIC" customModule="DiceRoller_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="Kqa-IF-XtH">
+                            <items>
+                                <label width="1" alignment="left" text="Select a QTY" textAlignment="center" id="qrd-SZ-wbX"/>
+                                <picker width="1" height="86" alignment="left" id="98n-7K-Fkq">
+                                    <connections>
+                                        <action selector="pickerDidChange:" destination="NiO-sb-nU5" id="m4h-HE-BUL"/>
+                                    </connections>
+                                </picker>
+                                <button width="1" alignment="left" title="Select Name" id="dHH-30-P1M">
+                                    <connections>
+                                        <action selector="selectNameButtonPressed" destination="NiO-sb-nU5" id="ixD-kw-1jT"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="thePicker" destination="98n-7K-Fkq" id="gqr-YE-Bfv"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="502" y="560"/>
         </scene>
     </scenes>
 </document>
